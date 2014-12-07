@@ -41,3 +41,6 @@ gem 'therubyracer'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Google Map
+gem "gmaps4rails"
+gem "geocoder"
