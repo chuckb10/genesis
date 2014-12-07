@@ -13,11 +13,10 @@ class FeedController < ApplicationController
     @texts = Array.new
     @r_km = @r.to_i/1000
     geoloc = @lat.to_s + "," + @lng.to_s + "," + @r_km.to_s + "km"
-    tweets = @client.search("",{:geocode => geoloc ,:result_type => "mixed", :lang => "ja" , :count => 15})
-    tweets.take(10).map do |tweet|
+    @tweets = @client.search("",{:geocode => geoloc ,:result_type => "mixed", :lang => "ja" , :count => 15})
+    @tweets.take(10).map do |tweet|
       @texts.push(tweet.text)
     end
-    
   end 
   
   def callback

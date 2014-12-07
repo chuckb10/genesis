@@ -1,3 +1,18 @@
-<% @texts.each do |text| %>
-<%= text %><br><br>
+<% @tweets.take(20).map do |tweet| %>
+  <div>
+    <img src="<%= tweet[:user][:profile_image_url] %>">
+    @<%= tweet[:user][:screen_name] %>
+  </div>
+  <div>
+    <%= tweet.text %>
+  </div>
+  <div>
+    <% tweet[:media].map do |m_uri| %>
+      <% if !m_uri.blank? %>
+        <img src="<%= m_uri[:media_url] %>">
+      <% end %>
+    <% end %>
+  <div>
+  <HR/>
+  <br/>
 <% end %>
