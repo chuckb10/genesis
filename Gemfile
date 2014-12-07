@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.7'
-# Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'rails', '4.1.8'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,9 +29,6 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# use v8 engine
-gem 'therubyracer'
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -40,7 +37,9 @@ gem 'therubyracer'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'therubyracer'
 
 # Google Map
 gem "gmaps4rails"
 gem "geocoder"
+gem 'twitter'
