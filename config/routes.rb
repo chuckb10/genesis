@@ -56,4 +56,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   get 'feed' => 'feed#show'
+  get 'callback' => 'feed#callback'
 end
